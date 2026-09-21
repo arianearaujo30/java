@@ -1,30 +1,32 @@
-public class Veiculo {
-    private String marca;
+public class Veiculo implements Aluguel {
+    private String placa;
+    private String modelo;
     private int ano;
+    private double valorDiaria;
 
-    public Veiculo(String marca, int ano) {
-        this.marca = marca;
+    public Veiculo(String placa, String modelo, int ano, double valorDiaria) {
+        this.placa = placa;
+        this.modelo = modelo;
         this.ano = ano;
+        this.valorDiaria = valorDiaria;
     }
 
-    public String getmarca() {
-        return marca;
-    }
+    public String getPlaca() { return placa; }
+    public void setPlaca(String placa) { this.placa = placa; }
 
-    public void setmarca(String marca) {
-        this.marca = marca;
-    }
+    public String getModelo() { return modelo; }
+    public void setModelo(String modelo) { this.modelo = modelo; }
 
-    public int getano() {
-        return ano;
-    }
+    public int getAno() { return ano; }
+    public void setAno(int ano) { this.ano = ano; }
 
-    public void setano(int ano) {
-        this.ano = ano;
-    }
+    public double getValorDiaria() { return valorDiaria; }
+    public void setValorDiaria(double valorDiaria) { this.valorDiaria = valorDiaria; }
 
-    public void exibirInformacoes() {
-        System.out.println("Marca: " + marca);
+    public void exibirDados() {
+        System.out.println("Placa: " + placa);
+        System.out.println("Modelo: " + modelo);
         System.out.println("Ano: " + ano);
+        System.out.printf("Valor da Diária: R$ %.2f\n", valorDiaria);
     }
 }
